@@ -1,0 +1,238 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="6EF-uI-4dK">
+            <objects>
+                <navigationController toolbarHidden="NO" id="WbM-Wc-VzM" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="uMC-oB-tFL">
+                        <rect key="frame" x="0.0" y="59" width="393" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <navigationBarAppearance key="standardAppearance">
+                            <offsetWrapper key="titlePositionAdjustment" horizontal="0.0" vertical="0.0"/>
+                        </navigationBarAppearance>
+                        <navigationBarAppearance key="compactAppearance"/>
+                        <navigationBarAppearance key="scrollEdgeAppearance"/>
+                    </navigationBar>
+                    <toolbar key="toolbar" opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="gAf-A3-e3Y">
+                        <rect key="frame" x="0.0" y="769" width="393" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </toolbar>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="eP7-ej-zCS"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="A4r-Md-O0T" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-969" y="-27"/>
+        </scene>
+        <!--HOME-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="CL01_Cabanillas_Lourdes" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="T6D-8K-Vmc">
+                                <rect key="frame" x="121.66666666666669" y="401" width="150" height="50"/>
+                                <color key="backgroundColor" systemColor="systemOrangeColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="150" id="BLt-fe-Lxk"/>
+                                    <constraint firstAttribute="height" constant="50" id="IfZ-Pd-Pqc"/>
+                                </constraints>
+                                <color key="tintColor" systemColor="labelColor"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="EJERCICIO 2"/>
+                                <connections>
+                                    <segue destination="A52-JD-GmQ" kind="show" id="WES-Xu-FD9"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LlH-6p-bLB">
+                                <rect key="frame" x="121.66666666666669" y="251" width="150" height="50"/>
+                                <color key="backgroundColor" systemColor="systemPurpleColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="BhE-Ib-RKb"/>
+                                    <constraint firstAttribute="width" constant="150" id="l47-uQ-m3b"/>
+                                </constraints>
+                                <color key="tintColor" systemColor="labelColor"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="EJERCICIO 1"/>
+                                <connections>
+                                    <segue destination="cs7-S6-gMg" kind="show" id="Zcm-Vr-6eN"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="T6D-8K-Vmc" firstAttribute="top" secondItem="LlH-6p-bLB" secondAttribute="bottom" constant="100" id="CdO-Ll-OTJ"/>
+                            <constraint firstItem="T6D-8K-Vmc" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="D8a-z1-pEj"/>
+                            <constraint firstItem="T6D-8K-Vmc" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="Nph-5l-x90"/>
+                            <constraint firstItem="LlH-6p-bLB" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="sAl-r1-sri"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="HOME" style="browser" id="YeS-yK-3WM"/>
+                    <connections>
+                        <outlet property="ejercicio01Button" destination="LlH-6p-bLB" id="lou-gZ-82B"/>
+                        <outlet property="ejercicio02Button" destination="T6D-8K-Vmc" id="Uu1-01-9r5"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="33" y="-27"/>
+        </scene>
+        <!--EJERCICIO 2-->
+        <scene sceneID="xUM-Pj-rFc">
+            <objects>
+                <viewController id="A52-JD-GmQ" customClass="E02ViewController" customModule="CL01_Cabanillas_Lourdes" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="YWs-AQ-dYo">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="M8I-fW-R5P">
+                                <rect key="frame" x="0.0" y="103" width="393" height="610"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="A52-JD-GmQ" id="Alg-Jc-VSN"/>
+                                    <outlet property="delegate" destination="A52-JD-GmQ" id="IYs-bf-eIb"/>
+                                </connections>
+                            </tableView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="u18-Bo-NYW">
+                                <rect key="frame" x="121.66666666666669" y="729" width="150" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="150" id="J9h-Da-ApQ"/>
+                                    <constraint firstAttribute="height" constant="40" id="kda-IS-nXm"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="gray" title="Agregar Tarea"/>
+                                <connections>
+                                    <action selector="agregarTareasDataButton:" destination="A52-JD-GmQ" eventType="touchUpInside" id="sFZ-wS-HuU"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="Qdb-GH-KFd"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="M8I-fW-R5P" firstAttribute="leading" secondItem="Qdb-GH-KFd" secondAttribute="leading" id="VHX-EV-5bO"/>
+                            <constraint firstItem="Qdb-GH-KFd" firstAttribute="bottom" secondItem="M8I-fW-R5P" secondAttribute="bottom" id="dXY-Py-8c1"/>
+                            <constraint firstItem="Qdb-GH-KFd" firstAttribute="bottom" secondItem="u18-Bo-NYW" secondAttribute="bottom" id="lyh-C1-8Xa"/>
+                            <constraint firstItem="M8I-fW-R5P" firstAttribute="top" secondItem="Qdb-GH-KFd" secondAttribute="top" id="qsa-PV-Esb"/>
+                            <constraint firstItem="Qdb-GH-KFd" firstAttribute="trailing" secondItem="M8I-fW-R5P" secondAttribute="trailing" id="sFM-tD-BG8"/>
+                            <constraint firstItem="u18-Bo-NYW" firstAttribute="centerX" secondItem="YWs-AQ-dYo" secondAttribute="centerX" id="ys6-kY-y4J"/>
+                        </constraints>
+                    </view>
+                    <toolbarItems>
+                        <barButtonItem title="Agregar Tarea" id="5iv-6T-1Gt">
+                            <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <connections>
+                                <action selector="agregarTareasData:" destination="A52-JD-GmQ" id="lzh-OL-dzH"/>
+                            </connections>
+                        </barButtonItem>
+                    </toolbarItems>
+                    <navigationItem key="navigationItem" title="EJERCICIO 2" id="X83-vO-ShP"/>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="tablaTareasData" destination="M8I-fW-R5P" id="jhW-nJ-aLI"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="exE-Um-l1W" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="881.67938931297704" y="495.77464788732397"/>
+        </scene>
+        <!--EJERCICIO 1-->
+        <scene sceneID="Mx8-ep-rWd">
+            <objects>
+                <viewController id="cs7-S6-gMg" customClass="E01ViewController" customModule="CL01_Cabanillas_Lourdes" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="eE6-i6-zG4">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GZv-xp-C02">
+                                <rect key="frame" x="121.66666666666669" y="401" width="150" height="50"/>
+                                <color key="backgroundColor" red="0.46202266219999999" green="0.83828371759999998" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="150" id="Bmt-Rr-wIP"/>
+                                    <constraint firstAttribute="height" constant="50" id="MZQ-Ab-9u8"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="AGREGAR"/>
+                                <connections>
+                                    <action selector="agregarTexto:" destination="cs7-S6-gMg" eventType="touchUpInside" id="Mvv-2i-xhN"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ct4-lR-hve">
+                                <rect key="frame" x="121.66666666666669" y="201" width="150" height="50"/>
+                                <color key="backgroundColor" systemColor="systemRedColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="VFn-0M-HqZ"/>
+                                    <constraint firstAttribute="width" constant="150" id="v2H-zd-Vx9"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="LISTAR"/>
+                                <connections>
+                                    <action selector="listarTexto:" destination="cs7-S6-gMg" eventType="touchUpInside" id="4A5-Au-niZ"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HnO-dr-CUn">
+                                <rect key="frame" x="121.66666666666669" y="601" width="150" height="50"/>
+                                <color key="backgroundColor" red="0.83216959239999999" green="0.98548370600000001" blue="0.47333085539999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="EED-jp-DDn"/>
+                                    <constraint firstAttribute="width" constant="150" id="hAR-bO-Sdl"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="ELIMINAR"/>
+                                <connections>
+                                    <action selector="eliminarTexto:" destination="cs7-S6-gMg" eventType="touchUpInside" id="UCZ-gt-ue1"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="Hu2-vy-sla"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Ct4-lR-hve" firstAttribute="centerX" secondItem="eE6-i6-zG4" secondAttribute="centerX" id="5F1-Wl-AGD"/>
+                            <constraint firstItem="HnO-dr-CUn" firstAttribute="centerX" secondItem="eE6-i6-zG4" secondAttribute="centerX" id="7Si-sV-HYQ"/>
+                            <constraint firstItem="GZv-xp-C02" firstAttribute="centerX" secondItem="eE6-i6-zG4" secondAttribute="centerX" id="NLL-6M-4g5"/>
+                            <constraint firstItem="GZv-xp-C02" firstAttribute="top" secondItem="Ct4-lR-hve" secondAttribute="bottom" constant="150" id="cK6-cG-IBK"/>
+                            <constraint firstItem="HnO-dr-CUn" firstAttribute="top" secondItem="GZv-xp-C02" secondAttribute="bottom" constant="150" id="reY-Zj-1Fj"/>
+                            <constraint firstItem="GZv-xp-C02" firstAttribute="centerY" secondItem="eE6-i6-zG4" secondAttribute="centerY" id="wWW-5E-eaU"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="EJERCICIO 1" id="XPU-fx-ADY"/>
+                    <connections>
+                        <outlet property="agregarTextoButton" destination="GZv-xp-C02" id="YmT-vG-GcX"/>
+                        <outlet property="eliminarTextoButton" destination="HnO-dr-CUn" id="nae-Sz-hXr"/>
+                        <outlet property="listarTextoButton" destination="Ct4-lR-hve" id="xeO-27-UVF"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="l3E-Fp-RPw" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="906" y="-177"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="labelColor">
+            <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemOrangeColor">
+            <color red="1" green="0.58431372549019611" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemPurpleColor">
+            <color red="0.68627450980392157" green="0.32156862745098042" blue="0.87058823529411766" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemRedColor">
+            <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
